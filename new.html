@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tambah Snippet — IbuSatset Code</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-text">
+    <h1>IbuSatset<span class="dot">Code</span></h1>
+    <span class="tagline">tambah snippet baru</span>
+  </div>
+  <a href="index.html" class="btn-ghost">&larr; Kembali ke daftar</a>
+</header>
+
+<main class="single-col narrow">
+
+  <section id="gate" class="panel">
+    <h2>Masuk sebagai admin</h2>
+    <p class="hint">Halaman ini dikunci — hanya admin yang boleh menambah snippet baru.</p>
+    <form id="gate-form">
+      <div class="field">
+        <label for="gate-password">Password admin</label>
+        <input id="gate-password" type="password" required autocomplete="current-password">
+      </div>
+      <p class="error-text" id="gate-error" hidden>Password salah, coba lagi.</p>
+      <button type="submit" class="btn-primary">Masuk</button>
+    </form>
+  </section>
+
+  <section id="form-section" class="panel" hidden>
+    <div class="admin-badge" id="admin-badge" hidden>
+      <span>Masuk sebagai admin</span>
+      <button type="button" class="btn-ghost" id="btn-logout">Keluar</button>
+    </div>
+    <h2>Tempel kode baru</h2>
+    <form id="snip-form">
+      <div class="field">
+        <label for="f-title">Judul</label>
+        <input id="f-title" type="text" placeholder="Misal: Fix conn.sendMessage" required>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="f-lang">Bahasa</label>
+          <select id="f-lang">
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="bash">Bash</option>
+            <option value="json">JSON</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="sql">SQL</option>
+            <option value="python">Python</option>
+            <option value="plaintext">Lainnya</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-filename">Nama file</label>
+          <input id="f-filename" type="text" placeholder="plugin.js">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-subtitle">Catatan singkat</label>
+        <input id="f-subtitle" type="text" placeholder="Konteks singkat (opsional)">
+      </div>
+      <div class="field">
+        <label for="f-code">Kode</label>
+        <textarea id="f-code" placeholder="Tempel kode hasil scrape / kode yang mau dibagikan di sini..." required spellcheck="false"></textarea>
+      </div>
+      <div class="field">
+        <label for="f-author">Nama / sumber</label>
+        <input id="f-author" type="text" placeholder="Isan">
+      </div>
+      <button type="submit" class="btn-primary">Simpan snippet</button>
+    </form>
+  </section>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/new.js"></script>
+</body>
+</html>
