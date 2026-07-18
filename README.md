@@ -1,4 +1,4 @@
-# IbuSatset Code
+# Saxn Code
 
 Alat ringan untuk **menempel, menyimpan, dan membagikan potongan kode** (misalnya hasil scrape atau snippet plugin Baileys/Laravel) tanpa perlu server/database. Semua statis — bisa langsung di-deploy ke Vercel.
 
